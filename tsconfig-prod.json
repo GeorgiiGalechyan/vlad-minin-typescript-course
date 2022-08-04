@@ -1,0 +1,57 @@
+{
+  "extends": "./tsconfig.json", // наследует из файла
+  "include": ["./Vladilen_TS_Basic/typescript/**/*"], // откуда брать файлы .ts для компиляции в .js
+  "exclude": ["node_modules", "/typescript/**/*.spec.ts"], // исключения... ??????????
+  "compilerOptions": {
+    // change setting for development
+    "target": "ES6", // Версия стандарта ECMAScript, в которую будет скомпилирован код.
+    "module": "ES6", // Модульная система, которую будет использовать ваше собранное приложение
+    "moduleResolution": "Node16", // Стратегия, которая будет использоваться для импорта модулей
+    "outDir": "./Vladilen_TS_Basic/javascript", // куда чохранять скомпилированные  файлы .js
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+
+    // Настройки строгости =============
+    //"strict": true, // по умолчанию включает все настройки строгости. Но мы будем включать их по одному.
+    "alwaysStrict": true, // включает строгий режим JavaScript - 'use strict'
+    "noImplicitAny": true, // подсвечивает места, где забыли указать тип. Дополнительно усилить эффект можно включив ESLint правило no-explicit-any.
+    "strictNullChecks": true, // не позволяет передавать undefined или null туда, где ожидаются переменные других типов, если это не разрешено явно.
+    "strictPropertyInitialization": true, // cледит, чтобы объявленные свойства класса всегда были инициализированы. Рабоает только при "strictNullChecks": true.
+    "strictFunctionTypes": true, // включает более строгую проверку сигнатур функций.
+    "noImplicitThis": true, // при использовании this проверяет, что контекст выполнения известен.
+    "strictBindCallApply": true, //включает более строгую проверку сигнатур при использовании соответствующих методов: bind, call, apply.
+
+    // Группа Linter Checks =============
+    // "noPropertyAccessFromIndexSignature": true, // запрещает обращаться к свойствам объекта через точку aka dot notation,  если свойства объекта описаны не явно, а через произвольные параметры (aka arbitrarily-named properties, index signatures).
+    // "noUncheckedIndexedAccess": true,
+    //
+    "noImplicitReturns": true, // Флаг проверяет, чтобы все ветки функции возвращали значение.
+    "noFallthroughCasesInSwitch": true, // Флаг проверяет наличие break в операторе switch/case.
+    "noUnusedLocals": true, // При "true" код проверяется на наличие неиспользуемых переменных. Использовать в  production, если не используется ESLint: no-unused-vars
+    "noUnusedParameters": true, // При "true" код проверяется на наличие неиспользуемых аргументов функций и методов. Использовать в  production, если не используется ESLint: no-unused-vars.
+
+    // Иные дерективы ==========
+    "downlevelIteration": false, // генерирует более многословный и более "правильный", но менее производительный код.
+    "forceConsistentCasingInFileNames": true,
+    "declaration": false, // генерируются файлы-аннотации (d.ts-файлы или тайпинги).
+
+    // Настройки декораторов ======
+    "experimentalDecorators": true, // активирут синтаксис декораторов "@"
+    "emitDecoratorMetadata": true, // расширяет функционал декораторов
+    // ======
+    "resolveJsonModule": true, // Включает возможность импортировать *.json файлы.
+    // "jsx":"react",  // Включиает поддержку jsx для Rect. Есть и др. знаения!!!
+
+    // Группа Advanced - поместили все опции, которым не нашлось отдельных групп. =========
+
+    "allowUnreachableCode": true, // Флаг запрещает недосягаемый код – код, написанный после операторов return, throw, break, continue. Включать в prodution стадии если не используется ESLint: "no-unreachable".
+    "allowUnusedLabels": false, // Опция запрещает неиспользуемые лэйблы. Включать в prodution стадии, если не используется ESLint: "no-unused-labels".
+
+    // Опции, которые включены по умолчанию и составляют типобезопасность TypeScript из коробки!
+    // По умолчанию они "false", так и оставим!!!
+    "noImplicitUseStrict": false, // Флаг автоматически добавляет "use strict" если target версия меньше, чем ES6.
+    "suppressExcessPropertyErrors": false, // Флаг проверяет, чтобы объект не мог содержать свойства, которые не были описаны в его структуре.
+    "suppressImplicitAnyIndexErrors": false, // Флаг проверяет, что используя скобочную нотацию невозможно обращаться к свойствам объекта, которые в нём не объявлены ни явно, ни через произвольные параметры.
+    "noStrictGenericChecks": false // Переопределение данного флага может сделать компилятор «более лояльным» при работе с generics.
+  }
+}
