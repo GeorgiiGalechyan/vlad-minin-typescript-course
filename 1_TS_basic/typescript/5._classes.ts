@@ -78,34 +78,35 @@ console.log(cat.color) // public поле color доступно в объект
 // Класс, реализующий абстрактный класс, должен вызывать super()в конструкторе.
 // Если абстрактный класс содердит абстрактный метод, то класс, реализующий абстрактный класс должен содержать реализацию всех абстрактных методов!
 
+// Абстрактный класс
 abstract class Component {
-  constructor(public title: string) {}
+  constructor(public title: string) {} // конструктор в лаконичном виде благодаря модификатору
 
+  // просто рандомный метод
   display(): void {
     console.log(this.title)
   }
 
+  // абстрактные методы
   abstract render(): void
   abstract info(): string
 }
 
+// класс AppComponent наследуется от абстрактного класса Component.
+// в этом классе мы должны прописать реализацию абстрактных методов render и info из родительского класса
 class AppComponent extends Component {
-  constructor(public title: string) { 
-    super(title) // must call super()
-  }
-
-   render(): void {
+  // реализация абстрактного метода render
+  render(): void {
     console.log('Component om render.')
   }
 
+  // реализация абстрактного метода info
   info(): string {
     return 'This is info.'
   }
 }
 
-const btn = new Component("button") {
+// создаем объект реализующий класс AppComponent
+const btn = new AppComponent('button')
 
- 
-
-  
-}
+// https://www.typescripttutorial.net/typescript-tutorial/typescript-abstract-classes/ - Отличный пример работы с абстрактными классами, методами и свойствами
