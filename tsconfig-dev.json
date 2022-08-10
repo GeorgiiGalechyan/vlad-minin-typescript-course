@@ -1,5 +1,4 @@
 {
-  "extends": "./tsconfig.json", // наследует из файла
   "include": ["./Vladilen_TS_Basic/typescript/**/*"], // откуда брать файлы .ts для компиляции в .js
   "exclude": ["node_modules", "/typescript/**/*.spec.ts"], // исключения... ??????????
   "compilerOptions": {
@@ -41,9 +40,6 @@
     // ======
     "resolveJsonModule": true, // Включает возможность импортировать *.json файлы.
     // "jsx":"react",  // Включиает поддержку jsx для Rect. Есть и др. знаения!!!
-
-    "references": "",
-    "typeAcquisition": "",
 
     // Группа Advanced - поместили все опции, которым не нашлось отдельных групп. =========
 
