@@ -58,12 +58,14 @@ function signContract(partner: BusinessPartner) {
 
   // Задаем логику для случая, когда partner принадлежит классу Supplier
   if (partner instanceof Supplier) {
-    message = partner.isInShortList
+    message = partner.isInShortList()
       ? 'Sign a new contract with the supplier'
       : 'Need to evaluate further'
   }
 
   // иначе, возвращаем message
+  message =
+    'Невалидный аргумент. Либо partner наследуется от недопустимого класса, либо передано несколько аргументов вместо одного.'
   return message
 }
 

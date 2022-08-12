@@ -5,7 +5,7 @@
     // change setting for development
     "target": "ES6", // Версия стандарта ECMAScript, в которую будет скомпилирован код.
     "module": "ES6", // Модульная система, которую будет использовать ваше собранное приложение
-    "moduleResolution": "Node16", // Стратегия, которая будет использоваться для импорта модулей
+    "moduleResolution": "NodeNext", // Стратегия, которая будет использоваться для импорта модулей
     "outDir": "./Vladilen_TS_Basic/javascript", // куда чохранять скомпилированные  файлы .js
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,

@@ -4,7 +4,26 @@
 [TypeScript - Быстрый Курс за 70 минут [2020]](https://youtu.be/nyIpDs2DJ_c)  
 [Продвинутый TypeScript. Декораторы, Компилятор, Generic Types, Namespaces](https://youtu.be/7NU6K4170As)
 
-## Настройки файла tsconfig
+## Базовый курс
+
+Базовый курс включает в себя:
+
+- установку языка TypeScript в проект;
+- знакомство с синтаксисом языка: типизация переменных, функций, классов и их полей и методов;
+- знакомство с некоторыми конструкциями языка: enum, type, interface;
+- знакомство с некоторыми возожностями языка: перегрузка функций, Type Guards
+- знакомство с модификаторами public, private, protected, readonly
+
+## Продвинутый курс
+
+Продвинутый курс включает в себя:
+
+- обновление локальной и глобальной версий TypeScript до последней версии;
+- настройку файла tsconfig;
+- углубленную изучение generic;
+-
+
+### Настройки файла tsconfig
 
 Цели:
 
@@ -16,4 +35,4 @@ tsconfig.json - основной файл, импортирует настрой
 - tsconfig-dev.json - configuration for development;
 - tsconfig-prod.json - configuration for production.
 
-Настраиваем по видео о Вдадилена Минима + статья с хабра "TypeScript: Раскладываем tsconfig по полочкам" https://habr.com/ru/post/542234/
+Настраиваем по видео от Вдадилена Минима + статья с хабра "TypeScript: Раскладываем tsconfig по полочкам" https://habr.com/ru/post/542234/
