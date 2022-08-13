@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    // "incremental: "true",                   /*                      */
+    "target": "ES2016" /*                      */,
+    "module": "ES6" /*                      */
+    // "lib": [],                              /*                      */
+    //
+
+    // "outDir": "",                           /*                      */
+    // "rootDir": "",                          /*                      */
+  }
+}
