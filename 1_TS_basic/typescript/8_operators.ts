@@ -1,9 +1,12 @@
 // В этом разделе будут рассмотрены некоторые вспомогательные операторы
 
+
+// создаем интерфейс
 interface IPerson {
   name: string
   age: number
 }
+
 
 type PersonKeys = keyof IPerson // 'name' | 'age'
 
